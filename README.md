@@ -1,3 +1,77 @@
+# User Management Dashboard  
+
+A web application for managing users, allowing users to view, add, edit, and delete user details. The application interacts with JSONPlaceholder API as a mock backend.  
+
+## Features  
+### User Interface:
+- Displays a list of users with details such as ID, First Name, Last Name, Email,
+and Department.
+- Buttons or links to "Add", "Edit", and "Delete" users.
+- A form to input details of a new user or edit details of an existing user.
+Backend Interaction:
+- Uses JSONPlaceholder, a free online REST API for
+demonstration and test purposes.
+- Specifically, uses the '/users' endpoint to fetch and manipulate user data.
+### Functionality:
+- View: Displays all users by fetching data from the '/users' endpoint.
+- Add: Allows adding a new user by posting to the '/users' endpoint. (Note:
+JSONPlaceholder won't actually add the user, but will simulate a successful
+response.)
+- Edit: Allows editing an existing user. This involves fetching the current
+data for a user, allowing for edits, and then putting the updated data back via
+the API.
+- Delete: Allows users to be deleted, by sending a delete request to the API.
+### Error Handling:
+- Handles scenarios where the API request might fail - shows an error message to
+the user in such cases.
+### Some Other Features:
+- Added client-side validation for the user input form. 
+
+## Deployed Website  
+The application has been deployed and can be accessed at:  
+https://user-dashboard-lakshay-bindlish.netlify.app/
+
+## Tech Stack  
+- Frontend: React, HTML, CSS, JavaScript  
+- API Calls: Axios  
+- Notifications: React-Toastify  
+
+## Installation & Setup  
+
+### Clone the repository  
+```
+git clone https://github.com/your-username/user-management-dashboard.git
+cd user-management-dashboard/frontend
+```
+
+### Install dependencies  
+```
+npm install
+```
+
+### Start the application  
+```
+npm start
+```
+The app will run at http://localhost:3000/  
+
+## API Integration  
+This project uses JSONPlaceholder as a mock backend for user data.  
+
+### Note on Department Field  
+The JSONPlaceholder API does not provide a department field. Instead, the company name field has been used in place of the department. Mock data could have been used, but for the scope of this assignment, using the company name field was a practical choice.  
+
+## Challenges Faced  
+- Handling API limitations – Since JSONPlaceholder does not provide a department field, a workaround was required by using the company name field.   
+- Popup model management – Ensuring proper opening and closing of the model without affecting other UI elements required careful event handling.    
+
+## Future Improvements  
+- Implement actual backend with database instead of using a mock API.  
+- Add user authentication and authorization for better security.  
+- Improve UI with better responsiveness and design enhancements.  
+- Implement pagination or infinite scrolling for better user experience with large datasets.  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
